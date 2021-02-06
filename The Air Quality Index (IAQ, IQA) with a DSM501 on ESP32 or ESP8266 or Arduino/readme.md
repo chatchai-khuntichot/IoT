@@ -19,8 +19,9 @@ The DSM501 is capable of classifying and measuring airborne particles less than 
 # Principle of communication with the ESP32 / Arduino / ESP8266
 
 The DSM501 does not send its measurement directly. It uses the PWM system. It will therefore be necessary to measure the ratio between the time spent in the high state (+ 4.5V) and the time spent in the low state (0V). Then, thanks to this curve, it is possible to determine the quantity of particles in the air.
-<img src="https://github.com/chatchai-khuntichot/IoT/blob/main/The%20Air%20Quality%20Index%20(IAQ,%20IQA)%20with%20a%20DSM501%20on%20ESP32%20or%20ESP8266%20or%20Arduino/dsm501-pwm-communication.png" width="450">
-
+<br>
+<img src="https://github.com/chatchai-khuntichot/IoT/blob/main/The%20Air%20Quality%20Index%20(IAQ,%20IQA)%20with%20a%20DSM501%20on%20ESP32%20or%20ESP8266%20or%20Arduino/dsm501-pwm-communication.png" width="550">
+<br>
 # Can I use the DSM501 on an ESP32?
 Some of you will certainly yell at the 4.5V outputs of the sensors plugged into the ESP32. Theoretically, the inputs of the ESP8266 must not exceed 3.3V. This is perfectly correct, but the ESP32 seems to tolerate a voltage overrun if the intensity remains low according to this study published by Digital Me. One risks especially to deteriorate its ESP by directly plug the + 5V on terminal 3, 3V or a GPIO output by mistake.
 
