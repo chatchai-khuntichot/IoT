@@ -7,8 +7,11 @@ The Air Quality Index (IAQ) is fairly easy to determine using an ESP32 (or ESP82
 
 # Principle of the sensor
 The DSM501 is a Led optical detector that is more economical to manufacture than Laser models. The operating principle is similar to the smoke detectors used in fire detectors. The led illuminates the particles in a dark room. A photo-detector collects light. The measured signal is then proportional to the size and the quantity of particles in suspension.
+<br>
 Attention. Do not use this sensor to detect fumes from a fire.
+<br>
 <img src="https://github.com/chatchai-khuntichot/IoT/blob/main/The%20Air%20Quality%20Index%20(IAQ,%20IQA)%20with%20a%20DSM501%20on%20ESP32%20or%20ESP8266%20or%20Arduino/principe-dsm501-dust-detector.png" width="450">
+<br>
 source : http://doc.lijun.li/misc-dust-detector-with-arduino-serial-comm.html
 
 The DSM501 is capable of classifying and measuring airborne particles less than 1 micron (PM1.0) and 2.5 micrometres (PM2.5) in size.
