@@ -2,6 +2,7 @@
 The "Soaring hunt the PM 2.5" project has implemented Calculate the Air Quality Index (IAQ, IQA) with a DSM501 on Arduino or ESP8266, a project that assigned Nong Um to measure PM in air with a drone.
 
 # Introduction
+![](https://github.com/chatchai-khuntichot/IoT/blob/main/The%20Air%20Quality%20Index%20(IAQ%2C%20IQA)%20with%20a%20DSM501%20on%20ESP32%20or%20ESP8266%20or%20Arduino/20210203_162737.jpg =350x350)
 The Air Quality Index (IAQ) is fairly easy to determine using an ESP32 (or ESP8266/Arduino) and a DSM501 sensor. The DSM501A is a detector capable of measuring the presence of fine particles in suspension in the atmosphere according to PM2.5 and PM10 standards. The DSM501A is a very economical sensor which can be used as a base to build an air quality measurement station connected with an ESP32. The DSM501A is able to carry out measurements to the PM2.5 and PM10 standards. That is, it is capable of detecting particles whose diameter is less than 2.5 μm for PM2.5 and less than 1 μm for PM1.0.
 
 # Principle of the sensor
@@ -28,7 +29,6 @@ long getPM(int DUST_SENSOR_DIGITAL_PIN) {
     duration = pulseIn(DUST_SENSOR_DIGITAL_PIN, LOW);
     lowpulseoccupancy += duration;
     endtime = millis();
-    
     if ((endtime-starttime) >= sampletime_ms) {
       ratio = lowpulseoccupancy / (sampletime_ms*10.0);
       //ratio = (lowpulseoccupancy-endtime+starttime)/(sampletime_ms*10.0);  // Integer percentage 0=>100 -> Not working
@@ -39,6 +39,7 @@ long getPM(int DUST_SENSOR_DIGITAL_PIN) {
     }
   }  
 }
+
 Sources : https://github.com/mysensors/MySensors/blob/master/examples/DustSensorDSM/DustSensorDSM.ino
 
 # Calculate the Air Quality Index (AQI)
