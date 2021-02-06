@@ -1,5 +1,12 @@
 #include <SimpleTimer.h>
-
+/* Connect the DSM501 sensor as follow 
+ * https://www.elektronik.ropla.eu/pdf/stock/smy/dsm501.pdf
+ * 1 black vert - Not used
+ * 2 red jaune - Vout2 - 1 microns (PM1.0)
+ * 3 white blanc - Vcc
+ * 4 yellow rouge - Vout1 - 2.5 microns (PM2.5)
+ * 5 orange noir - GND
+*/
 #define DUST_SENSOR_DIGITAL_PIN_PM10  12        //  Pin 12 ของ ESP32/ESP8266 กับ Pin 2 ของ DSM501
 #define DUST_SENSOR_DIGITAL_PIN_PM25  13        //  Pin 13 ของ ESP32/ESP8266 กับ Pin 4 ของ DSM501
 #define COUNTRY                       2         //  มาตรฐานของแต่ละประเทศ 0. ฝรั่งเศส, 1. ยุโรป, 2. สหรัฐอเมริกา/จีน
