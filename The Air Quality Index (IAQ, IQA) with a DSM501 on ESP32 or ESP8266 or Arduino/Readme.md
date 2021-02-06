@@ -2,7 +2,7 @@
 The "Soaring hunt the PM" ("เหินฟ้าล่าค่า PM") project has implemented Calculate the Air Quality Index (IAQ, IQA) with a DSM501 on Arduino or ESP8266, a project that assigned Nong Um to measure PM in air with a drone.
 
 # Introduction
-<img src="https://github.com/chatchai-khuntichot/IoT/blob/main/The%20Air%20Quality%20Index%20(IAQ%2C%20IQA)%20with%20a%20DSM501%20on%20ESP32%20or%20ESP8266%20or%20Arduino/20210203_162737.jpg" width="350">
+<img src="https://github.com/chatchai-khuntichot/IoT/blob/main/The%20Air%20Quality%20Index%20(IAQ%2C%20IQA)%20with%20a%20DSM501%20on%20ESP32%20or%20ESP8266%20or%20Arduino/images/20210203_162737.jpg" width="350">
 The Air Quality Index (IAQ) is fairly easy to determine using an ESP32 (or ESP8266/Arduino) and a DSM501 sensor. The DSM501A is a detector capable of measuring the presence of fine particles in suspension in the atmosphere according to PM2.5 and PM10 standards. The DSM501A is a very economical sensor which can be used as a base to build an air quality measurement station connected with an ESP32. The DSM501A is able to carry out measurements to the PM2.5 and PM10 standards. That is, it is capable of detecting particles whose diameter is less than 2.5 μm for PM2.5 and less than 1 μm for PM1.0.
 
 # Principle of the sensor
@@ -10,7 +10,7 @@ The DSM501 is a Led optical detector that is more economical to manufacture than
 <br>
 Attention. Do not use this sensor to detect fumes from a fire.
 <br>
-<img src="https://github.com/chatchai-khuntichot/IoT/blob/main/The%20Air%20Quality%20Index%20(IAQ,%20IQA)%20with%20a%20DSM501%20on%20ESP32%20or%20ESP8266%20or%20Arduino/principe-dsm501-dust-detector.png" width="450">
+<img src="https://github.com/chatchai-khuntichot/IoT/blob/main/The%20Air%20Quality%20Index%20(IAQ,%20IQA)%20with%20a%20DSM501%20on%20ESP32%20or%20ESP8266%20or%20Arduino/images/principe-dsm501-dust-detector.png" width="450">
 <br>
 source : http://doc.lijun.li/misc-dust-detector-with-arduino-serial-comm.html
 
@@ -20,7 +20,7 @@ The DSM501 is capable of classifying and measuring airborne particles less than 
 
 The DSM501 does not send its measurement directly. It uses the PWM system. It will therefore be necessary to measure the ratio between the time spent in the high state (+ 4.5V) and the time spent in the low state (0V). Then, thanks to this curve, it is possible to determine the quantity of particles in the air.
 <br>
-<img src="https://github.com/chatchai-khuntichot/IoT/blob/main/The%20Air%20Quality%20Index%20(IAQ,%20IQA)%20with%20a%20DSM501%20on%20ESP32%20or%20ESP8266%20or%20Arduino/dsm501-pwm-communication.png" width="550">
+<img src="https://github.com/chatchai-khuntichot/IoT/blob/main/The%20Air%20Quality%20Index%20(IAQ,%20IQA)%20with%20a%20DSM501%20on%20ESP32%20or%20ESP8266%20or%20Arduino/images/dsm501-pwm-communication.png" width="550">
 <br>
 # Can I use the DSM501 on an ESP32?
 Some of you will certainly yell at the 4.5V outputs of the sensors plugged into the ESP32. Theoretically, the inputs of the ESP8266 must not exceed 3.3V. This is perfectly correct, but the ESP32 seems to tolerate a voltage overrun if the intensity remains low according to this study published by Digital Me. One risks especially to deteriorate its ESP by directly plug the + 5V on terminal 3, 3V or a GPIO output by mistake.
@@ -67,29 +67,29 @@ This summary table (taken from the Wikipedia article) makes it possible to deter
 
 For example, if a PM10 = 15.5 is found, the simplified ATMO (AQI) will be 3. If there are several measures, the worst index (the highest score) becomes the ATMO.
 
-<img src="https://github.com/chatchai-khuntichot/IoT/blob/main/The%20Air%20Quality%20Index%20(IAQ,%20IQA)%20with%20a%20DSM501%20on%20ESP32%20or%20ESP8266%20or%20Arduino/Opera%20Snapshot_2021-02-06_175359_diyprojects.io.png" width="950">
+<img src="https://github.com/chatchai-khuntichot/IoT/blob/main/The%20Air%20Quality%20Index%20(IAQ,%20IQA)%20with%20a%20DSM501%20on%20ESP32%20or%20ESP8266%20or%20Arduino/images/Opera%20Snapshot_2021-02-06_175359_diyprojects.io.png" width="950">
 
 # How to determine the European CAQI index (also called Citeair)
 The calculation is similar to the French ATMO. It is obtained using the following grid published on the website airqualitynow.eu. At a minimum, the measurement should last 1 hour (PM10 or PM2.5).
 <br>
-<img src="https://github.com/chatchai-khuntichot/IoT/blob/main/The%20Air%20Quality%20Index%20(IAQ,%20IQA)%20with%20a%20DSM501%20on%20ESP32%20or%20ESP8266%20or%20Arduino/caqi-europe-common-air-quality-index-grid.png" width="450">
+<img src="https://github.com/chatchai-khuntichot/IoT/blob/main/The%20Air%20Quality%20Index%20(IAQ,%20IQA)%20with%20a%20DSM501%20on%20ESP32%20or%20ESP8266%20or%20Arduino/images/caqi-europe-common-air-quality-index-grid.png" width="450">
 <br>
 Source : https://www.airqualitynow.eu/about_indices_definition.php
 # How to calculate AQI in China and the USA
 China and the US have the same calculation system. The level of air quality has 6 levels (good, moderate, mediocre, bad for health, very bad for health, dangerous). The threshold therefore ranges from 0 to 500 (or more) instead of going from 1 to 10 in Europe (ATMO). It is very often the method of calculation that one finds in the examples of codes Arduino. There is also an online calculator here.
 <br>
-<img src="https://github.com/chatchai-khuntichot/IoT/blob/main/The%20Air%20Quality%20Index%20(IAQ,%20IQA)%20with%20a%20DSM501%20on%20ESP32%20or%20ESP8266%20or%20Arduino/Opera%20Snapshot_2021-02-06_175426_diyprojects.io.png" width="650">
+<img src="https://github.com/chatchai-khuntichot/IoT/blob/main/The%20Air%20Quality%20Index%20(IAQ,%20IQA)%20with%20a%20DSM501%20on%20ESP32%20or%20ESP8266%20or%20Arduino/images/Opera%20Snapshot_2021-02-06_175426_diyprojects.io.png" width="650">
 <br>
 To calculate the threshold, use this formula.
 <br>
-<img src="https://github.com/chatchai-khuntichot/IoT/blob/main/The%20Air%20Quality%20Index%20(IAQ,%20IQA)%20with%20a%20DSM501%20on%20ESP32%20or%20ESP8266%20or%20Arduino/Opera%20Snapshot_2021-02-06_175444_diyprojects.io.png" width="950">
+<img src="https://github.com/chatchai-khuntichot/IoT/blob/main/The%20Air%20Quality%20Index%20(IAQ,%20IQA)%20with%20a%20DSM501%20on%20ESP32%20or%20ESP8266%20or%20Arduino/images/Opera%20Snapshot_2021-02-06_175444_diyprojects.io.png" width="950">
 
 # Circuit
 Connect the DSM501 to an ESP32 or Arduino or ESP8266 using the following marking
 <br>
-<img src="https://github.com/chatchai-khuntichot/IoT/blob/main/The%20Air%20Quality%20Index%20(IAQ,%20IQA)%20with%20a%20DSM501%20on%20ESP32%20or%20ESP8266%20or%20Arduino/Opera%20Snapshot_2021-02-06_205212_github.com.png" width="450">
+<img src="https://github.com/chatchai-khuntichot/IoT/blob/main/The%20Air%20Quality%20Index%20(IAQ,%20IQA)%20with%20a%20DSM501%20on%20ESP32%20or%20ESP8266%20or%20Arduino/images/Opera%20Snapshot_2021-02-06_205212_github.com.png" width="450">
 <br>
-<img src="https://github.com/chatchai-khuntichot/IoT/blob/main/The%20Air%20Quality%20Index%20(IAQ,%20IQA)%20with%20a%20DSM501%20on%20ESP32%20or%20ESP8266%20or%20Arduino/20210203_162704.jpg" width="450">
+<img src="https://github.com/chatchai-khuntichot/IoT/blob/main/The%20Air%20Quality%20Index%20(IAQ,%20IQA)%20with%20a%20DSM501%20on%20ESP32%20or%20ESP8266%20or%20Arduino/images/20210203_162704.jpg" width="450">
 <br>
 Source : http://www.samyoungsnc.com/products/3-1%20Specification%20DSM501.pdf
 
