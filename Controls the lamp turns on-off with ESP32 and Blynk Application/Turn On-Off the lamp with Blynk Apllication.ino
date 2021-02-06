@@ -1,5 +1,5 @@
 /*
- * ตัวอย่างการใช้ BLYNK APP ควบคุมการปิดเปิดหลอดไฟ LED
+ * ตัวอย่างการใช้ BLYNK APP ควบคุมการปิดเปิดหลอดไฟ
  */
 #define BLYNK_PRINT Serial
 #include <WiFi.h>
