@@ -67,7 +67,7 @@ This summary table (taken from the Wikipedia article) makes it possible to deter
 
 For example, if a PM10 = 15.5 is found, the simplified ATMO (AQI) will be 3. If there are several measures, the worst index (the highest score) becomes the ATMO.
 
-<img src="https://github.com/chatchai-khuntichot/IoT/blob/main/The%20Air%20Quality%20Index%20(IAQ,%20IQA)%20with%20a%20DSM501%20on%20ESP32%20or%20ESP8266%20or%20Arduino/Opera%20Snapshot_2021-02-06_175359_diyprojects.io.png" width="750">
+<img src="https://github.com/chatchai-khuntichot/IoT/blob/main/The%20Air%20Quality%20Index%20(IAQ,%20IQA)%20with%20a%20DSM501%20on%20ESP32%20or%20ESP8266%20or%20Arduino/Opera%20Snapshot_2021-02-06_175359_diyprojects.io.png" width="950">
 
 # How to determine the European CAQI index (also called Citeair)
 The calculation is similar to the French ATMO. It is obtained using the following grid published on the website airqualitynow.eu. At a minimum, the measurement should last 1 hour (PM10 or PM2.5).
@@ -82,12 +82,14 @@ China and the US have the same calculation system. The level of air quality has 
 <br>
 To calculate the threshold, use this formula.
 <br>
-<img src="https://github.com/chatchai-khuntichot/IoT/blob/main/The%20Air%20Quality%20Index%20(IAQ,%20IQA)%20with%20a%20DSM501%20on%20ESP32%20or%20ESP8266%20or%20Arduino/Opera%20Snapshot_2021-02-06_175444_diyprojects.io.png" width="750">
+<img src="https://github.com/chatchai-khuntichot/IoT/blob/main/The%20Air%20Quality%20Index%20(IAQ,%20IQA)%20with%20a%20DSM501%20on%20ESP32%20or%20ESP8266%20or%20Arduino/Opera%20Snapshot_2021-02-06_175444_diyprojects.io.png" width="950">
 
 # Circuit
 Connect the DSM501 to an ESP32 or Arduino or ESP8266 using the following marking
 <br>
 <img src="https://github.com/chatchai-khuntichot/IoT/blob/main/The%20Air%20Quality%20Index%20(IAQ,%20IQA)%20with%20a%20DSM501%20on%20ESP32%20or%20ESP8266%20or%20Arduino/Opera%20Snapshot_2021-02-06_205212_github.com.png" width="450">
+<br>
+<img src="https://github.com/chatchai-khuntichot/IoT/blob/main/The%20Air%20Quality%20Index%20(IAQ,%20IQA)%20with%20a%20DSM501%20on%20ESP32%20or%20ESP8266%20or%20Arduino/20210203_162704.jpg" width="450">
 <br>
 Source : http://www.samyoungsnc.com/products/3-1%20Specification%20DSM501.pdf
 
