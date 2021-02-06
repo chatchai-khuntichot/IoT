@@ -1,5 +1,5 @@
 # The Air Quality Index (IAQ, IQA) with a DSM501 on ESP32 or ESP8266 or Arduino
-The "Soaring hunt the PM 2.5" project has implemented Calculate the Air Quality Index (IAQ, IQA) with a DSM501 on Arduino or ESP8266, a project that assigned Nong Um to measure PM in air with a drone.
+The "Soaring hunt the PM" ("เหินฟ้าล่าค่า PM") project has implemented Calculate the Air Quality Index (IAQ, IQA) with a DSM501 on Arduino or ESP8266, a project that assigned Nong Um to measure PM in air with a drone.
 
 # Introduction
 <img src="https://github.com/chatchai-khuntichot/IoT/blob/main/The%20Air%20Quality%20Index%20(IAQ%2C%20IQA)%20with%20a%20DSM501%20on%20ESP32%20or%20ESP8266%20or%20Arduino/20210203_162737.jpg" width="350">
