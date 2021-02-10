@@ -1,5 +1,5 @@
 # The Air Quality Index (IAQ, IQA) with a DSM501 on ESP32 or ESP8266 or Arduino
-The "Soaring hunt the PM" ("เหินฟ้าล่าค่า PM") project has implemented Calculate the Air Quality Index (IAQ, IQA) with a DSM501 on Arduino or ESP8266, a project that assigned Nong Um to measure PM in air with a drone.
+The "Soaring hunt the PM" ("เหินฟ้าล่าค่า PM") project has implemented Calculate the Air Quality Index (IAQ, IQA) with a DSM501 on Arduino or ESP8266, a project that assigned Nong Aoom to measure PM in air with a drone.
 
 # Introduction
 <img src="https://github.com/chatchai-khuntichot/IoT/blob/main/The%20Air%20Quality%20Index%20(IAQ%2C%20IQA)%20with%20a%20DSM501%20on%20ESP32%20or%20ESP8266%20or%20Arduino/images/20210203_162737.jpg" width="350">
@@ -23,7 +23,7 @@ The DSM501 does not send its measurement directly. It uses the PWM system. It wi
 <img src="https://github.com/chatchai-khuntichot/IoT/blob/main/The%20Air%20Quality%20Index%20(IAQ,%20IQA)%20with%20a%20DSM501%20on%20ESP32%20or%20ESP8266%20or%20Arduino/images/dsm501-pwm-communication.png" width="550">
 <br>
 # Can I use the DSM501 on an ESP32?
-Some of you will certainly yell at the 4.5V outputs of the sensors plugged into the ESP32. Theoretically, the inputs of the ESP8266 must not exceed 3.3V. This is perfectly correct, but the ESP32 seems to tolerate a voltage overrun if the intensity remains low according to this study published by Digital Me. One risks especially to deteriorate its ESP by directly plug the + 5V on terminal 3, 3V or a GPIO output by mistake.
+Some of you will certainly yell at the 4.5V outputs of the sensors plugged into the ESP32. Theoretically, the inputs of the ESP32 must not exceed 3.3V. This is perfectly correct, but the ESP32 seems to tolerate a voltage overrun if the intensity remains low according to this study published by Digital Me. One risks especially to deteriorate its ESP32 by directly plug the + 5V on terminal 3, 3V or a GPIO output by mistake.
 
 # Determination of particle concentration
 Fortunately, Makers have done the job for us! Here is the function that retrieves the PWM signal and determine the ratio. Knowing the ratio, it is possible to deduce the concentration of particles in suspension in the air in mg/m3.
