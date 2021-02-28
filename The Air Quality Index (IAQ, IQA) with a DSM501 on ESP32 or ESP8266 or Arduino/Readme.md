@@ -93,5 +93,5 @@ Connect the DSM501 to an ESP32 or Arduino or ESP8266 using the following marking
 <br>
 Source : http://www.samyoungsnc.com/products/3-1%20Specification%20DSM501.pdf
 
-# Refereance
+# Reference
 "Calculate the Air Quality Index (IAQ, IQA) with a DSM501 on Arduino or ESP8266", diyprojects, 15 Dec. 2020, diyprojects.io/calculate-air-quality-index-iaq-iqa-dsm501-arduino-esp8266/#.YB5rBulR1Pb
