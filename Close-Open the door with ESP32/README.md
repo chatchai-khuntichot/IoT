@@ -1,5 +1,5 @@
 # Introduction
-Closing-opening the door with ESP32 via Blynk application is a basic project that Nong Poo Nim has been assigned to develop this. The development consists of an ESP32 and Servo motor.
+Closing-opening the door with ESP32 via Blynk application is a basic project that Nong Pu Nim has been assigned to develop this. The development consists of an ESP32 and Servo motor.
 The Servo motor connection arm applied from <a href="https://www.youtube.com/watch?v=_pcEXlyhIIU" target="_blank">"DIY mini project to open and close the door with mobile phone esp8266 + Blynk (default)"</a> and Servo motor rotation via Blynk applied from <a href="https://randomnerdtutorials.com/esp32-servo-motor-web-server-arduino-ide/" target="_blank">"ESP32 Servo Motor Web Server with Arduino IDE"</a>.
 
 <img src="https://github.com/chatchai-khuntichot/IoT/blob/main/Close-Open%20the%20door%20with%20ESP32/images/Screenshot_20210510-113844_Blynk.jpg" width="250">
